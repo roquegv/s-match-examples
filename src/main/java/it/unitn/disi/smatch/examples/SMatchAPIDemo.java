@@ -66,9 +66,9 @@ public class SMatchAPIDemo {
         IContextMapping<INode> result = mm.online(s, t);
 
         System.out.println("Processing results...");
-        System.out.println("Printing matches to: " + example);
+        System.out.println("Printing matches:");
         for (IMappingElement<INode> e : result) {
-            System.out.println("\t" + e.getRelation() + "\t" + e.getTarget().getNodeData().getName());
+            System.out.println(e.getSource().getNodeData().getName() + "\t" + e.getRelation() + "\t" + e.getTarget().getNodeData().getName());
         }
 
         System.out.println("Done");
