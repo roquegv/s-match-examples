@@ -3,16 +3,12 @@ package it.unitn.disi.smatch.examples;
 import it.unitn.disi.smatch.IMatchManager;
 import it.unitn.disi.smatch.MatchManager;
 import it.unitn.disi.smatch.SMatchException;
-import it.unitn.disi.common.components.ConfigurableException;
-import it.unitn.disi.smatch.data.trees.IContext;
-import it.unitn.disi.smatch.data.trees.INode;
 import it.unitn.disi.smatch.data.mappings.IContextMapping;
 import it.unitn.disi.smatch.data.mappings.IMappingElement;
+import it.unitn.disi.smatch.data.trees.IContext;
+import it.unitn.disi.smatch.data.trees.INode;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 /**
  * Demonstrates S-Match API demo.
@@ -21,7 +17,7 @@ import java.util.Properties;
  */
 public class SMatchAPIDemo {
 
-    public static void main(String[] args) throws ConfigurableException, IOException {
+    public static void main(String[] args) throws SMatchException, IOException {
         example();
     }
 
@@ -31,16 +27,10 @@ public class SMatchAPIDemo {
      * @throws SMatchException SMatchException
      * @throws IOException     IOException
      */
-    public static void example() throws ConfigurableException, IOException {
+    public static void example() throws SMatchException {
         System.out.println("Starting example...");
         System.out.println("Creating MatchManager...");
-        IMatchManager mm = MatchManager.getInstance();
-
-        Properties config = new Properties();
-        config.load(SMatchAPIDemo.class.getResourceAsStream("/it/unitn/disi/smatch/examples/conf/s-match.properties"));
-
-        System.out.println("Configuring MatchManager from resource /it/unitn/disi/smatch/examples/conf/s-match.properties...");
-        mm.setProperties(config);
+        IMatchManager mm = MatchManager.getInstanceFromResource("/it/unitn/disi/smatch/examples/conf/s-match.xml");
 
         String example = "Courses";
         System.out.println("Creating source context...");
