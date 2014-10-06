@@ -25,7 +25,6 @@ public class SMatchAPIDemo {
      * Creates the classifications, matches them and processes the results.
      *
      * @throws SMatchException SMatchException
-     * @throws IOException     IOException
      */
     public static void example() throws SMatchException {
         System.out.println("Starting example...");
