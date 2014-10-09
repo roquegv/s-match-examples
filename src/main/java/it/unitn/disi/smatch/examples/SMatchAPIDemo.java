@@ -57,7 +57,7 @@ public class SMatchAPIDemo {
         System.out.println("Processing results...");
         System.out.println("Printing matches:");
         for (IMappingElement<INode> e : result) {
-            System.out.println(e.getSource().getNodeData().getName() + "\t" + e.getRelation() + "\t" + e.getTarget().getNodeData().getName());
+            System.out.println(e.getSource().nodeData().getName() + "\t" + e.getRelation() + "\t" + e.getTarget().nodeData().getName());
         }
 
         System.out.println("Done");
