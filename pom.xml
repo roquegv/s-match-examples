@@ -32,12 +32,13 @@
             <version>2.0.0-SNAPSHOT</version>
         </dependency>
 
+<!-- ROQUE 
         <dependency>
             <groupId>it.unitn.disi</groupId>
             <artifactId>s-match-wordnet</artifactId>
             <version>2.0.0-SNAPSHOT</version>
         </dependency>
-
+-->
         <dependency>
             <groupId>net.sf.extjwnl</groupId>
             <artifactId>extjwnl-data-wn31</artifactId>
@@ -67,7 +68,15 @@
             <artifactId>s-match-nlp</artifactId>
             <version>2.0.0-SNAPSHOT</version>
         </dependency>
-
+        
+        <!-- ROQUE:begin -->
+        <dependency>
+            <groupId>it.unitn.disi</groupId>
+            <artifactId>s-match-ukc</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+        </dependency>
+		<!-- ROQUE:end -->
+		
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
